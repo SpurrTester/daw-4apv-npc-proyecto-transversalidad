@@ -1,0 +1,133 @@
+/*ME NERI PEREZ CHRISTIAN            GRUPO:4APV/
+/DAW                      FECHA:5/Mayo/2023/
+/A continuacion le aplicamos CSS al archivo INTRODUCCION.HTML; Desde un Archivo CSS.(INTRODUCCION.CSS)*/
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, rgb(235, 235, 235), #e300f7);
+}
+
+h1 {
+  text-align: center;
+  padding: 20px;
+  background-color: #f272f7;
+}
+
+p {
+  margin: 20px;
+  padding: 10px;
+  border: 1px solid #e712ee;
+  background-color: #fc8ee0;
+}
+.direcciones {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.direcciones td {
+  padding: 10px;
+  text-align: center;
+}
+
+.direcciones tr:nth-child(odd) {
+  background-color: #b004ff;
+}
+
+.direcciones tr:hover {
+  background-color: #fc3ff2;
+}
+
+.direcciones a {
+  text-decoration: none;
+  color: #f9f7ff;
+}
+
+.direcciones a:hover {
+  color: #f099c1;
+}
+
+.direcciones h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.direcciones {
+  animation: fadeIn 1s;
+}
+hr {
+  margin: 20px;
+}
+.loader {
+    width: 106px;
+    height: 56px;
+    display: block;
+    margin: 30px auto;
+    background-image: linear-gradient(#ee0ce3 50px, transparent 0), linear-gradient(#ee0ce3 50px, transparent 0), linear-gradient(#ee0ce3 50px, transparent 0), linear-gradient(#ee0ce3 50px, transparent 0), radial-gradient(circle 14px, #ee0ce3 100%, transparent 0);
+    background-size: 48px 15px , 15px 35px, 15px 35px, 25px 15px, 28px 28px;
+    background-position: 25px 5px, 58px 20px, 25px 17px, 2px 37px, 76px 0px;
+    background-repeat: no-repeat;
+    position: relative;
+    transform: rotate(-45deg);
+    box-sizing: border-box;
+  }
+  .loader::after,
+  .loader::before {
+    content: '';  
+    position: absolute;
+    width: 56px;
+    height: 56px;
+    border: 6px solid #181414;
+    border-radius: 50%;
+    left: -45px;
+    top: -10px;
+    background-repeat: no-repeat;
+    background-image: linear-gradient( #ee0ce3 64px, transparent 0), linear-gradient(#ee0ce3 66px, transparent 0), radial-gradient(circle 4px, #ee0ce3 100%, transparent 0);
+    background-size: 40px 1px , 1px 40px, 8px 8px;
+    background-position: center center;
+    box-sizing: border-box;
+    animation: rotation 0.3s linear infinite;
+  }
+  .loader::before {
+    left: 25px;
+    top: 60px;
+  }
+  
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+} 
+.cuestionario{
+  background: linear-gradient(to bottom, rgb(250, 248, 248), #f709f7);
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(53, 31, 31, 0.1);
+  animation: fadeIn 1s ease-in-out;
+  border-radius: 5px;
+  border: outset 5px rgb(202, 27, 236);
+}
+
+        
+        
+        
+
+
+    
+        
+  
+        

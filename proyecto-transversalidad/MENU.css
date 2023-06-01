@@ -1,0 +1,263 @@
+body {
+  background: linear-gradient(to bottom, #b605ec, #efadff);
+}
+
+
+  #intro{
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      color: rgb(212, 4, 174);
+      text-align: left;
+  }
+  .introduccion{
+      display: block;
+      width: 100px;
+      height: 100px;
+  }
+  #eco{
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      color: rgb(212, 4, 174);
+      text-align: left;
+  }
+  .ecologia{
+      display: block;
+      width: 100px;
+      height: 100px;
+      
+  }
+  #ingles{
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      color: rgb(212, 4, 174);
+      text-align: left;
+  }
+  .in{
+      display: block;
+      width: 100px;
+      height: 100px;
+  }
+  #cal{
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      color: rgb(212, 4, 174);
+      text-align: left;
+  }
+  .calculo{
+      display: block;
+      width: 100px;
+      height: 100px;
+  }
+  #fisi{
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      color: rgb(212, 4, 174);
+      text-align: left;
+  }
+  .fisica{
+      display: block;
+      width: 100px;
+      height: 100px;
+  }
+  #daec{
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      color: rgb(212, 4, 174);
+      text-align: left;
+  }
+  .dae{
+      display: block;
+      width: 100px;
+      height: 100px;
+  }
+  .direcciones {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  .direcciones td {
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .direcciones tr:nth-child(odd) {
+    background-color: #b653e4;
+  }
+  
+  .direcciones tr:hover {
+    background-color: #9662b4;
+  }
+  
+  .direcciones a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .direcciones a:hover {
+    color: #fcfcfc;
+  }
+  
+  .direcciones h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .direcciones {
+    animation: fadeIn 1s;
+  }
+      
+      .A3 {
+      color: yellow;
+      font-weight: bold;
+      margin: auto;
+      }
+      h1, h2 {
+        display: inline-block;
+        font-size: 3rem;
+        color: #fff;
+        text-transform: uppercase;
+        position: relative;
+        animation: pastel 5s infinite;
+        cursor: pointer;
+      }
+      
+      @keyframes pastel {
+        0% { color: #ff9999; }
+        14% { color: #ffcc99; }
+        28% { color: #ffff99; }
+        42% { color: #99ff99; }
+        57% { color: #99ccff; }
+        71% { color: #cc99ff; }
+        85% { color: #ff99cc; }
+        100% { color: #ff9999; }
+      }
+      
+      
+      h1:hover, h2:hover {
+        animation: shake 0.5s infinite;
+      }
+      
+      @keyframes shake {
+        0% { transform: translateX(0); }
+        25% { transform: translateX(-10px); }
+        50% { transform: translateX(10px); }
+        75% { transform: translateX(-10px); }
+        100% { transform: translateX(0); }
+      }
+      
+      h1::before, h2::before {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #ffcc00;
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+      }
+      
+      h1:hover::before, h2:hover::before {
+        transform: scaleX(1);
+      }
+          
+      h3{
+          text-align: right;
+      }
+      /* Animación para las imágenes */
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Aplica la animación a todas las imágenes con la clase 'fade-in-image' */
+.fade-in-image {
+  animation: fade-in 1s ease-in-out;
+}
+.fade-in-image {
+  transition: transform 0.3s ease;
+  border: 2px solid #c505ff; /* Estilo y color del borde */
+}
+
+.fade-in-image:hover {
+  transform: scale(1.2);
+}
+a {
+  display: inline-block;
+  position: relative;
+  border: 2px solid transparent;
+  transition: border-color 0.3s ease;
+  border-radius: 5px;
+  background-color: #d684f0;
+}
+
+a:hover {
+  border-color: #faf3f3;
+  transform: scale(1.1);
+}
+@keyframes glowing {
+  0% { color: #fff; text-shadow: 0 0 5px #fff; }
+  50% { color: #f301e7; text-shadow: 0 0 20px #fff8fe; }
+  100% { color: #fff; text-shadow: 0 0 5px #fff; }
+}
+
+a {
+  display: inline-block;
+  position: relative;
+  animation: glowing 2s infinite;
+}
+.animation-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+.animation-text {
+  animation-name: spurrAnimation;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes spurrAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+
+
+
+
+
+
+
+
+  
+  
+      
+  
+
+  
+  
+  
+  
+  
+  

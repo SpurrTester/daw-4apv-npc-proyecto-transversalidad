@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cuestionario DAEC</title>
+    <link rel="stylesheet" type="text/css" href="D:\DAW\Proyecto\DAEC\CSS/DAEC.css">
+</head>
+<body>
+    <div class="cuestionario">
+    <h1 class="info-heading">DAEC Proyecto Transversalidad Cuestionario JavaScript</h1>
+  <h2 id="pregunta"></h2>
+  <div id="opciones"></div>
+  <button id="anterior">Anterior</button>
+  <button id="siguiente">Siguiente</button>
+  <button id="resultado">Ver resultado</button>
+
+  <script>
+    const cuestionario = [
+      {
+        pregunta: "¿Cuál es la sintaxis correcta para declarar una variable en JavaScript?",
+        opciones: ["variable x;", "v x;", "var x;"],
+        respuestaCorrecta: 2
+      },
+      {
+        pregunta: "¿Cuál es el método utilizado para agregar elementos al final de un arreglo en JavaScript?",
+        opciones: [".push()", ".pop()", ".concat()"],
+        respuestaCorrecta: 0
+      },
+      {
+        pregunta: "¿Cuál de las siguientes opciones muestra cómo se comenta una línea en JavaScript?",
+        opciones: ["// Este es un comentario", "<!-- Este es un comentario -->", "/* Este es un comentario */"],
+        respuestaCorrecta: 0
+      },
+      {
+        pregunta: "¿Cuál es el operador utilizado para concatenar cadenas en JavaScript?",
+        opciones: ["+", "-", "*"],
+        respuestaCorrecta: 0
+      },
+      {
+        pregunta: "¿Cuál es el resultado de la expresión '3' + 2 en JavaScript?",
+        opciones: ["5", "32", "Error"],
+        respuestaCorrecta: 1
+      },
+      {
+        pregunta: "¿Cuál es la forma correcta de escribir un comentario de varias líneas en JavaScript?",
+        opciones: ["/* Este es un comentario */", "<!-- Este es un comentario -->", "// Este es un comentario"],
+        respuestaCorrecta: 0
+      },
+      {
+        pregunta: "¿Cuál de las siguientes opciones es una forma correcta de declarar una función en JavaScript?",
+        opciones: ["function = myFunction() {}", "function myFunction() {}", "myFunction() = function() {}"],
+        respuestaCorrecta: 1
+      },
+      {
+        pregunta: "¿Cuál es el método utilizado para seleccionar un elemento por su ID en JavaScript?",
+        opciones: [".querySelector()", ".getElementById()", ".getElementsByClassName()"],
+        respuestaCorrecta: 1
+      },
+      {
+        pregunta: "¿Cuál de las siguientes opciones muestra cómo se imprime un mensaje en la consola en JavaScript?",
+        opciones: ["print('Hola Mundo');", "console.log('Hola Mundo');", "alert('Hola Mundo');"],
+        respuestaCorrecta: 1
+      },
+      {
+        pregunta: "¿Cuál es el resultado de la expresión 2 + 2 * 3 en JavaScript?",
+        opciones: ["8", "10", "6"],
+        respuestaCorrecta: 0
+      }
+    ];
+
+    let indicePregunta = 0;
+    let respuestasCorrectas = 0;
+    let preguntasIncorrectas = [];
+
+    function mostrarPregunta() {
+      const preguntaActual = cuestionario[indicePregunta];
+      const preguntaElemento = document.getElementById("pregunta");
+      preguntaElemento.textContent = preguntaActual.pregunta;
+
+      const opcionesElemento = document.getElementById("opciones");
+      opcionesElemento.innerHTML = "";
+
+      preguntaActual.opciones.forEach(function(opcion, indice) {
+        const opcionElemento = document.createElement("div");
+        opcionElemento.classList.add("opcion");
+        opcionElemento.textContent = opcion;
+        opcionElemento.addEventListener("click", function() {
+          verificarRespuesta(indice);
+        });
+        opcionesElemento.appendChild(opcionElemento);
+      });
+
+      const siguienteBoton = document.getElementById("siguiente");
+      const anteriorBoton = document.getElementById("anterior");
+
+      if (indicePregunta === 0) {
+        anteriorBoton.style.display = "none";
+      } else {
+        anteriorBoton.style.display = "block";
+      }
+
+      if (indicePregunta === cuestionario.length - 1) {
+        siguienteBoton.style.display = "none";
+        resultadoBtn.style.display = "block";
+      } else {
+        siguienteBoton.style.display = "block";
+        resultadoBtn.style.display = "none";
+      }
+    }
+
+    function verificarRespuesta(respuestaUsuario) {
+      const preguntaActual = cuestionario[indicePregunta];
+
+      if (respuestaUsuario === preguntaActual.respuestaCorrecta) {
+        respuestasCorrectas++;
+      } else {
+        preguntasIncorrectas.push(indicePregunta);
+      }
+
+      indicePregunta++;
+
+      if (indicePregunta === cuestionario.length) {
+        mostrarResultado();
+      } else {
+        mostrarPregunta();
+      }
+    }
+
+    function mostrarResultado() {
+      const preguntaElemento = document.getElementById("pregunta");
+      preguntaElemento.textContent = "Has respondido correctamente " + respuestasCorrectas + " de " + cuestionario.length + " preguntas.";
+
+      const opcionesElemento = document.getElementById("opciones");
+      opcionesElemento.innerHTML = "";
+
+      const siguienteBoton = document.getElementById("siguiente");
+      siguienteBoton.style.display = "none";
+
+      const anteriorBoton = document.getElementById("anterior");
+      anteriorBoton.style.display = "none";
+
+      const resultadoBtn = document.getElementById("resultado");
+      resultadoBtn.style.display = "none";
+
+      if (preguntasIncorrectas.length > 0) {
+        const preguntasIncorrectasElemento = document.createElement("div");
+        preguntasIncorrectasElemento.classList.add("preguntas-incorrectas");
+        preguntasIncorrectasElemento.innerHTML = "<h3>Preguntas incorrectas:</h3>";
+
+        preguntasIncorrectas.forEach(function(preguntaIndex) {
+          const pregunta = cuestionario[preguntaIndex];
+          const preguntaIncorrectaElemento = document.createElement("p");
+          preguntaIncorrectaElemento.textContent = pregunta.pregunta;
+          preguntasIncorrectasElemento.appendChild(preguntaIncorrectaElemento);
+        });
+
+        opcionesElemento.appendChild(preguntasIncorrectasElemento);
+      }
+    }
+
+    function irPreguntaAnterior() {
+      if (indicePregunta > 0) {
+        indicePregunta--;
+        mostrarPregunta();
+      }
+    }
+
+    function mostrarResultado() {
+      const preguntaElemento = document.getElementById("pregunta");
+      preguntaElemento.textContent = "Has respondido correctamente " + respuestasCorrectas + " de " + cuestionario.length + " preguntas.";
+
+      const opcionesElemento = document.getElementById("opciones");
+      opcionesElemento.innerHTML = "";
+
+      const siguienteBoton = document.getElementById("siguiente");
+      siguienteBoton.style.display = "none";
+
+      const anteriorBoton = document.getElementById("anterior");
+      anteriorBoton.style.display = "none";
+
+      const resultadoBtn = document.getElementById("resultado");
+      resultadoBtn.style.display = "none";
+
+      if (preguntasIncorrectas.length > 0) {
+        const preguntasIncorrectasElemento = document.createElement("div");
+        preguntasIncorrectasElemento.classList.add("preguntas-incorrectas");
+        preguntasIncorrectasElemento.innerHTML = "<h3>Preguntas incorrectas:</h3>";
+
+        preguntasIncorrectas.forEach(function(preguntaIndex) {
+          const pregunta = cuestionario[preguntaIndex];
+          const preguntaIncorrectaElemento = document.createElement("p");
+          preguntaIncorrectaElemento.textContent = pregunta.pregunta;
+          preguntasIncorrectasElemento.appendChild(preguntaIncorrectaElemento);
+        });
+
+        opcionesElemento.appendChild(preguntasIncorrectasElemento);
+      }
+    }
+
+    window.onload = mostrarPregunta;
+
+    document.getElementById("siguiente").addEventListener("click", verificarRespuesta);
+    document.getElementById("anterior").addEventListener("click", irPreguntaAnterior);
+
+    const resultadoBtn = document.getElementById("resultado");
+    resultadoBtn.addEventListener("click", mostrarResultado);
+  </script>
+    </div>
+    <table class="direcciones">
+        <tr>
+        <td><h3><a class="A1" target="_blanck" href="D:\DAW\PROYECTO\DAEC\HTML/DAEC.HTML">Volver a Daec</a></h3></td>
+        <td><h3><a class="A2" target="_blanck" href="D:\DAW\PROYECTO\MENU\HTML\MENU.html">Menu</a></h3></td>
+        </tr>
+        </table><br>
+</body>
+</html>

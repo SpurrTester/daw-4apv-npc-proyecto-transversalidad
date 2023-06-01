@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CALCULO</title>
+  <link rel="stylesheet" type="text/css" href="E:\DAW\Proyecto\CALCULO\CSS/calculo.css" media="all" />
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+  <div class="cuestionario">
+    <center>
+      <span class="loader"></span>
+      </center>
+    <h1>CALCULO</h1>
+    <div class="question-container">
+      <h2>"Razon de cambio"</h2>
+      <div class="question">
+        <h3>¿Qué es la razón de cambio?</h3>
+        <p>
+          La razón de cambio representa la relación entre los cambios de la variable dependiente en comparación con los cambios
+          de la variable independiente. Es la razón de cambio de y con respecto a x. Esta razón de cambio muestra cómo los cambios
+          en y están relacionados con los cambios de x.
+        </p>
+      </div>
+      <table class="tabla">
+        <thead>
+          <tr>
+            <th>Tiempo</th>
+            <th>cm</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Dia 7</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>Dia 10</td>
+            <td>4</td>
+          </tr>
+          <tr>
+            <td>Dia 12</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <td>Dia 15</td>
+            <td>6</td>
+          </tr>
+          <tr>
+            <td>Dia 20</td>
+            <td>7</td>
+          </tr>
+          <tr>
+            <td>Dia 25</td>
+            <td>10</td>
+          </tr>
+        </tbody>
+      </table>
+      <BR>
+        <table>
+            <tr>
+              <th>Día (x)</th>
+              <th>Valor (y)</th>
+              <th>Razón de cambio</th>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>3</td>
+              <td>(10 - 3) / (4 - 7) = 7 / -3 = -2.33</td>
+            </tr>
+            <tr>
+              <td>10</td>
+              <td>4</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>12</td>
+              <td>5</td>
+              <td>(15 - 5) / (6 - 12) = 10 / -6 = -1.67</td>
+            </tr>
+            <tr>
+              <td>15</td>
+              <td>6</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>20</td>
+              <td>7</td>
+              <td>(25 - 7) / (10 - 7) = 18 / 3 = 6</td>
+            </tr>
+            <tr>
+              <td>25</td>
+              <td>10</td>
+              <td></td>
+            </tr>
+          </table>
+          <div id="plot"></div>
+
+          <script>
+            // Datos de la razón de cambio
+            var x = [1, 2, 3];
+            var y = [2.333, 1.667, 6];
+        
+            // Configuración de la gráfica
+            var trace = {
+              x: x,
+              y: y,
+              mode: 'markers',
+              type: 'scatter',
+              marker: {
+                color: 'rgb(31, 119, 180)',
+                size: 8
+              }
+            };
+        
+            var layout = {
+              title: 'Razón de cambio de Crecimiento',
+              xaxis: {
+                title: 'Valores Conseguidos Mediante Operaciones'
+              },
+              yaxis: {
+                title: 'Razón de cambio de la Planta'
+              },
+              plot_bgcolor: 'rgb(240, 240, 240)'
+            };
+        
+            var data = [trace];
+        
+            // Generar la gráfica
+            Plotly.newPlot('plot', data, layout);
+          </script>
+      <div class="question">
+        <h3>¿Cuál es la fórmula utilizada para calcular la razón de cambio?</h3>
+        <p>
+          La fórmula que se utiliza es:
+        </p>
+        <p class="formula">
+          m = (y<sub>2</sub> - y<sub>1</sub>) / (x<sub>2</sub> - x<sub>1</sub>)
+        </p>
+      </div>
+      <div class="question">
+        <h3>¿Cómo se aplica la fórmula de la razón de cambio en un contexto específico?</h3>
+        <p>
+          Para aplicar la fórmula de la razón de cambio, simplemente sustituye los valores de y<sub>1</sub>, y<sub>2</sub>, x<sub>1</sub> y x<sub>2</sub> y realiza el cálculo correspondiente. Esto se puede hacer en función de los cm que fue midiendo la planta en determinados días, como se muestra en la tabla.
+        </p>
+      </div>
+    </div>
+    <table class="direcciones">
+        <tr>
+        <td><h3><a class="A1" target="_blanck" href="E:\DAW\PROYECTO\INGLES\HTML/INGLES.HTML">Atras</a></h3></td>
+        <td><h3><a class="A2" target="_blanck" href="E:\DAW\PROYECTO\MENU\HTML\MENU.html">Menu</a></h3></td>
+        <td><h3><a class="A2" target="_blanck" href="E:/DAW/PROYECTO/FISICA/HTML/FISICA.html">Siguiente</a></h3></td>
+        </tr>
+        </table><br>
+  </div>
+</body>
+</html>
+

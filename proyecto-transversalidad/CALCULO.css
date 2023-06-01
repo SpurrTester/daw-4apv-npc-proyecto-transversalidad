@@ -1,0 +1,189 @@
+/*ME Neri Perez Gabriel            GRUPO:4APV/
+/DAW                      FECHA:5/Mayo/2023/
+/A continuacion le aplicamos CSS al archivo CALCULO.HTML; Desde un Archivo CSS.(CALCULO.CSS)*/
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: linear-gradient(to bottom, pink, #b652f8);
+  }
+  
+  .cuestionario {
+    background: linear-gradient(to bottom, rgb(250, 248, 248), #fda2d0);
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+    border-radius: 5px;
+  }
+  
+  h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #9662b4;
+  }
+  h2 {
+    color: #9662b4;
+
+  }
+  
+  .question-container {
+    margin-bottom: 20px;
+  }
+  
+  .question {
+    margin-bottom: 20px;
+  }
+  
+  .question h3 {
+    font-size: 18px;
+    color: #a14eac;
+    margin-bottom: 10px;
+  }
+  
+  .question p {
+    line-height: 1.5;
+  }
+  
+  .formula {
+    font-family: "Courier New", monospace;
+    font-size: 18px;
+  }
+  .direcciones {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  .direcciones td {
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .direcciones tr:nth-child(odd) {
+    background-color: #b653e4;
+  }
+  
+  .direcciones tr:hover {
+    background-color: #9662b4;
+  }
+  
+  .direcciones a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .direcciones a:hover {
+    color: #fcfcfc;
+  }
+  
+  .direcciones h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .direcciones {
+    animation: fadeIn 1s;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    color: #b652f8
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  tr:hover {
+    background-color: #f5f5f5;
+  }
+  
+  @keyframes fade {
+    from { background-color: transparent; }
+    to { background-color: #f5f5f5; }
+  }
+  
+  tr {
+    animation: fade 0.5s ease;
+  }
+  p{
+    color: #8f10b6;
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-align: center;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    animation: fadeIn 1s ease-in-out;
+  }
+  #plot {
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    border: 1px solid #b700ff;
+    box-shadow: 0 0 5px rgba(122, 6, 255, 0.1);
+    border-radius: 5px;
+  }
+
+  .plot-title {
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .loader {
+    width: 106px;
+    height: 56px;
+    display: block;
+    margin: 30px auto;
+    background-image: linear-gradient(#ee0ce3 50px, transparent 0), linear-gradient(#ee0ce3 50px, transparent 0), linear-gradient(#ee0ce3 50px, transparent 0), linear-gradient(#ee0ce3 50px, transparent 0), radial-gradient(circle 14px, #ee0ce3 100%, transparent 0);
+    background-size: 48px 15px , 15px 35px, 15px 35px, 25px 15px, 28px 28px;
+    background-position: 25px 5px, 58px 20px, 25px 17px, 2px 37px, 76px 0px;
+    background-repeat: no-repeat;
+    position: relative;
+    transform: rotate(-45deg);
+    box-sizing: border-box;
+  }
+  .loader::after,
+  .loader::before {
+    content: '';  
+    position: absolute;
+    width: 56px;
+    height: 56px;
+    border: 6px solid #181414;
+    border-radius: 50%;
+    left: -45px;
+    top: -10px;
+    background-repeat: no-repeat;
+    background-image: linear-gradient( #ee0ce3 64px, transparent 0), linear-gradient(#ee0ce3 66px, transparent 0), radial-gradient(circle 4px, #ee0ce3 100%, transparent 0);
+    background-size: 40px 1px , 1px 40px, 8px 8px;
+    background-position: center center;
+    box-sizing: border-box;
+    animation: rotation 0.3s linear infinite;
+  }
+  .loader::before {
+    left: 25px;
+    top: 60px;
+  }
+  
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+} 

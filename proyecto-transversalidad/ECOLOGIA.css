@@ -1,0 +1,193 @@
+/*ME NERI PEREZ GABRIEL             GRUPO:4APV/
+/DAW                      FECHA:5/Mayo/2023/
+/A continuacion le aplicamos CSS al archivo ECOLOGIA.HTML; Desde un Archivo CSS.(ECOLOGIA.CSS)*/
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, rgb(235, 235, 235), #15f700);
+}
+
+h1, h2 {
+    text-align: center;
+    color: #288f30;
+}
+
+p {
+    margin-bottom: 20px;
+    color: #288f30;
+}
+
+.container {
+    position: relative;
+    display: inline-block;
+}
+
+.container:hover .overlay {
+    opacity: 1;
+}
+
+.container:hover .overlay .text {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.overlay .text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+.video-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.video1 {
+    max-width: 100%;
+}
+
+table {
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+td, th {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+#p2 {
+    margin-bottom: 20px;
+}
+.direcciones {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  .direcciones td {
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .direcciones tr:nth-child(odd) {
+    background-color: #36ff61;
+  }
+  
+  .direcciones tr:hover {
+    background-color: #10f008;
+  }
+  
+  .direcciones a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .direcciones a:hover {
+    color: #fcfcfc;
+  }
+  
+  .direcciones h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .direcciones {
+    animation: fadeIn 1s;
+  }
+.cuestionario {
+    background: linear-gradient(to bottom, rgb(250, 248, 248), #4cf709);
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+    border-radius: 5px;
+    border: outset 5px rgb(54, 160, 40);
+}
+#tabla3 {
+    margin: 20px auto;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 500px;
+    animation: fadeIn 1s ease-in-out;
+    color: #2ff008;
+  }
+  
+  #tabla3 td {
+    padding: 10px;
+    border: 1px solid #288f30;
+    background-color: linear-gradient(to bottom, rgb(117, 248, 117), #15f700);
+    transition: background-color 0.3s;
+    color: #11b62c;
+  }
+  
+  #tabla3 td:hover {
+    background-color: #89ff9d;
+  }
+  
+  #ol-3 {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  #list3 {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  #ol-3 li {
+    margin-bottom: 5px;
+    transition: color 0.3s;
+  }
+  
+  #ol-3 li:hover {
+    color: #4ce766;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  img {
+    max-width: 25%;
+    height: auto;
+  }
+  .video-container {
+    max-width: 25%;
+    height: auto;
+  }
+  
+  
+  

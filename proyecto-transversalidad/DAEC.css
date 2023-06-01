@@ -1,0 +1,314 @@
+/*ME NERI PEREZ CHRISTIAN            GRUPO:4APV/
+/DAW                      FECHA:5/Mayo/2023/
+/A continuacion le aplicamos CSS al archivo DAEC.HTML; Desde un Archivo CSS.(DAEC.CSS)*/
+.info-sections {
+  column-count: 3; /* Número de columnas */
+  column-gap: 40px; /* Espacio entre columnas */
+  column-rule: 100px solid transparent; /* Espacio vertical entre columnas */
+}
+
+.info-section {
+  break-inside: avoid-column; /* Evita que un elemento se divida en columnas */
+  padding: 20px;
+    background-color: linear-gradient(to bottom, rgb(255, 255, 255), #7e7979);
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgb(255, 255, 255);
+    border: white
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background: linear-gradient(to bottom, pink, #cb89f7);
+}
+.pregunta {
+  font-weight: bold;
+  margin-bottom: 10px;
+  animation: fadeIn 1s ease-in-out;
+  color: rgb(243, 35, 243);
+}
+
+.opcion {
+  margin-bottom: 5px;
+  cursor: pointer;
+  background: linear-gradient(to bottom, #df41ff, #8612a3);
+  padding: 10px;
+  border-radius: 5px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.opcion:hover {
+  background: linear-gradient(to bottom, #8612a3, #df41ff);
+}
+
+#siguiente {
+  display: block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #a300ee;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  animation: fadeIn 1s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#siguiente:hover {
+  background-color: #f85cd1;
+}
+
+#siguiente:active {
+  background-color: #ff19c5;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+#anterior {
+  background-color: #df077e;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  display: none;
+  border-radius: 5px;
+}
+
+#anterior:hover {
+  background-color: #b32ce9;
+}
+h1 {
+  color: #ca0adba1;
+  text-align: center;
+  margin-top: 40px;
+  animation: fadeIn 1s ease-in-out;
+}
+#resultado {
+  background-color: #df077e;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  display: none;
+  border-radius: 5px;
+}
+
+#resultado:hover {
+  background-color: #b32ce9;
+}
+p {
+  color: #cf54f5;
+  font-size: 16px;
+  margin-bottom: 20px;
+  text-align: center;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.cuestionario {
+  background: linear-gradient(to bottom, rgb(250, 248, 248), #fda2d0);
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease-in-out;
+  border-radius: 5px;
+  border: outset 5px rgb(241, 93, 184);
+}
+.info-heading {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: rgb(150, 77, 150);
+}
+.info-text {
+  margin-bottom: 20px;
+  color: rgb(130, 130, 223);
+}
+
+.direcciones {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.direcciones td {
+  padding: 10px;
+  text-align: center;
+}
+
+.direcciones tr:nth-child(odd) {
+  background-color: #b653e4;
+}
+
+.direcciones tr:hover {
+  background-color: #9662b4;
+}
+
+.direcciones a {
+  text-decoration: none;
+  color: #333;
+}
+
+.direcciones a:hover {
+  color: #fcfcfc;
+}
+
+.direcciones h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.direcciones {
+  animation: fadeIn 1s;
+}
+h1 {
+  text-align: center;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .cuestionari {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-top: 20px;
+    width: 800px;
+    margin: 0 auto;
+    background-color: linear-gradient(to bottom, rgb(250, 248, 248), #fda2d0);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(255, 247, 247);
+    border: outset 5px rgb(241, 93, 184);
+    
+  }
+    
+  .info-text {
+    color: #74427e;
+    font-size: 14px;
+  }
+  
+  pre {
+    background-color: #ff98f6;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 10px;
+    color: #c710f5;
+  }
+  
+  hr {
+    margin-top: 30px;
+    border: none;
+    border-top: 1px solid #ddd;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+  }
+
+  th {
+    background-color: #f2f2f2;
+  }
+  img {
+    max-width: 25%;
+    height: auto;
+  }
+   /* Animación para las imágenes */
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Aplica la animación a todas las imágenes con la clase 'fade-in-image' */
+.fade-in-image {
+  animation: fade-in 1s ease-in-out;
+}
+.fade-in-image {
+  transition: transform 0.3s ease;
+  border: 2px solid #c505ff; /* Estilo y color del borde */
+}
+
+.fade-in-image:hover {
+  transform: scale(1.2);
+}
+.loader {
+  width: 106px;
+  height: 56px;
+  display: block;
+  margin: 30px auto;
+  background-image: linear-gradient(#ee0ce3 50px, transparent 0), linear-gradient(#ee0ce3 50px, transparent 0), linear-gradient(#ee0ce3 50px, transparent 0), linear-gradient(#ee0ce3 50px, transparent 0), radial-gradient(circle 14px, #ee0ce3 100%, transparent 0);
+  background-size: 48px 15px , 15px 35px, 15px 35px, 25px 15px, 28px 28px;
+  background-position: 25px 5px, 58px 20px, 25px 17px, 2px 37px, 76px 0px;
+  background-repeat: no-repeat;
+  position: relative;
+  transform: rotate(-45deg);
+  box-sizing: border-box;
+}
+.loader::after,
+.loader::before {
+  content: '';  
+  position: absolute;
+  width: 56px;
+  height: 56px;
+  border: 6px solid #181414;
+  border-radius: 50%;
+  left: -45px;
+  top: -10px;
+  background-repeat: no-repeat;
+  background-image: linear-gradient( #ee0ce3 64px, transparent 0), linear-gradient(#ee0ce3 66px, transparent 0), radial-gradient(circle 4px, #ee0ce3 100%, transparent 0);
+  background-size: 40px 1px , 1px 40px, 8px 8px;
+  background-position: center center;
+  box-sizing: border-box;
+  animation: rotation 0.3s linear infinite;
+}
+.loader::before {
+  left: 25px;
+  top: 60px;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} 
+
+  
